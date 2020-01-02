@@ -11,7 +11,7 @@ const weatherState = ({latitude, longtitude}, callback) => {
             callback('Cordonnées non trouvées!', undefined)
         }
         else {
-            callback(undefined, body.currently.summary + ', la temperature est égal à ' + body.currently.temperature + ' et il y a ' + body.currently.precipProbability + '% chance qu\'il pleut.')
+            callback(undefined, body.daily.data[0].summary + ' La temperature est égal à ' + body.currently.temperature + ' degrés et il y a ' + body.currently.precipProbability + '% chance qu\'il pleut.')
         }
     })
 }
